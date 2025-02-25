@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Compressor - @ariphx</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Compressor</h1>
+        
+        <form id="uploadForm">
+            <!-- File Input -->
+            <div class="file-container">
+                <label for="fileUpload" class="custom-file-upload">Choose File</label>
+                <input type="file" id="fileUpload" name="pdf" accept="application/pdf" required>
+                <p id="fileName">No file selected</p>
+            </div>
+
+            <!-- Input Size -->
+            <div class="size-input">
+                <input type="number" id="sizeInput" name="size" placeholder="Size" required min="1">
+                <select id="sizeUnit" name="unit">
+                    <option value="MB">MB</option>
+                    <option value="KB">KB</option>
+                </select>
+            </div>
+
+            <!-- Button Compress -->
+            <button type="submit" id="compressBtn">Compress PDF</button>
+        </form>
+
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <p>Compressing...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
